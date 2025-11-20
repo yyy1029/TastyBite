@@ -1,7 +1,3 @@
-Here's a complete **README.md** description for your project **TastyBite** based on the details from your report:
-
----
-
 # TastyBite - Online Food Ordering System
 
 TastyBite is an innovative online food ordering system designed to enhance user experiences and empower restaurant managers with advanced tools for menu and order management. This project provides a comprehensive solution to improve customer engagement, streamline menu management, and enable data-driven decision-making.
