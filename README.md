@@ -49,7 +49,7 @@ For restaurant managers, the system provides a robust dashboard to:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/TastyBite.git
+   git clone https://github.com/yyy1029/TastyBite.git
    ```
 
 2. Navigate into the project directory:
