@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="/cart/js/userAvatar.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!--aside section start-->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2>T<span>astyBite</span></h2>
+                </div>
+                <div class="close" id="close_bar">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+                <!--end top-->
+
+                <div class="sidebar">
+                    <a href="/cart/Cdashboard/Cdashboard.html"   class="active">
+                        <span class="material-symbols-outlined">dashboard</span>
+                        <h3>Dashboard</h3>
+                    </a>
+                    <a href="/cart/Cdashboard/userinformation/userinformation.html">
+                    <span class="material-symbols-outlined">account_circle</span>
+                    <h3>User Information</h3>
+                    </a>
+                    <a href="/cart/Cdashboard/adress/adress.html">
+                        <span class="material-symbols-outlined">
+                            home
+                            </span>
+                            <h3>Address</h3>  
+                    </a>
+
+                    <a href="/cart/Cdashboard/favorite/favorite.html">
+                        <span class="material-symbols-outlined">
+                            kid_star
+                            </span>
+                            <h3>Favorites</h3>       
+                    </a>
+
+                    <a href="/cart/Cdashboard/historyorder/historyorder.html">
+                        <span class="material-symbols-outlined">
+                            list_alt
+                            </span>
+                            <h3>History Order</h3>
+                    </a>
+                    <a href="#" id="logoutBtn">
+                        <span class="material-symbols-outlined">logout</span>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+           
+        </aside>
+        <!--aside section end-->   
+
+
+         <!--main section start--> 
+         <main>
+            <h1>Dashboard</h1>
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <!--start insight-->
+            <div class="insights">
+                <!---start balance-->
+                <div class="balance">
+                  <span class="material-symbols-outlined">account_balance</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Account Balance</h3>
+                            <h1>$256,468</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">
+                                80%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---end balance-->
+
+                  <!---start consumption-->
+                <div class="consumption">
+                    <span class="material-symbols-outlined">
+                          payments
+                      </span>
+                      <div class="middle">
+                          <div class="left">
+                              <h3>Consumption</h3>
+                              <h1>$256,468</h1>
+                          </div>
+                          <div class="progress">
+                              <svg>
+                                  <circle r="30" cy="40" cx="40"></circle>
+                              </svg>
+                              <div class="number">
+                                  80%
+                              </div>
+                          </div>
+                      </div>
+                      <small>Last Month</small>
+                  </div>
+                  <!---end consumption-->
+            </div>
+              <!--end insight-->
+
+
+              <!--start recent order-->
+              <div class="recent_order">
+                <h1>Recent Orders</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Price</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>11/10/2024</td>
+                            <td>$100</td>
+                            <td>Finished</td>
+                            <td class="waring">Finished</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>9/8/2023</td>
+                            <td>$200</td>
+                            <td>Finished</td>
+                            <td class="waring">Finished</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>7/11/2023</td>
+                            <td>$150</td>
+                            <td>Finished</td>
+                            <td class="waring">Finished</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+              <!--end recent order-->
+              
+         </main>  
+          <!--main section end--> 
+          
+           <!--Right section end-->   
+          <div class="right">
+            <div class="top">
+                <button id="menu_bar">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-outlined active">light_mode</span>
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p><b>Jacob</b></p>
+                        <p>Customer</p>
+                        <small class="text-muted"></small>
+                    </div>
+                    <div class="profile_photo">
+                        <img src="user.bmp" alt="">
+                    </div>
+                </div>
+            </div>
+            <!--end top-->
+
+            <!--starts account information-->
+            <div class="account_information">
+                <h2>Account Information</h2>
+                <div class="informations">
+                <div class="information">
+                    <span class="material-symbols-outlined">event</span>
+                    <div class="message">
+                        <p><b>Register Day</b> 10/10/1911</p>
+                    </div>
+                </div>
+
+                <div class="information">
+                    <span class="material-symbols-outlined">toc</span>
+                    <div class="message">
+                        <p><b>Total Orders</b> 2000</p>
+                    </div>
+                </div>
+
+                <div class="information">
+                    <span class="material-symbols-outlined">attach_money</span>
+                    <div class="message">
+                        <p><b>Total Payments</b> $10000</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!--end account information-->
+            
+          </div>
+           <!--right section end-->   
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="/cart/js/logo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+</html>
+

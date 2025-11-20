@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="analyticsPage.css">
+    <script src="http://js.china1.fun/jquery.js"></script>
+    <script src="/cart/js/logo.js"></script>
+    <script src="/cart/js/userAvatar.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!--aside section start-->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2>T<span>astyBite</span></h2>
+                </div>
+                <div class="close" id="close_bar">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+            <!--end top-->
+
+            <div class="sidebar">
+                <a href="/cart/Mdashboard/Mdashboard.html">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="/cart/Mdashboard/customer/customer.html">
+                    <span class="material-symbols-outlined">person</span>
+                    <h3>Customers</h3>
+                </a>
+                <a href="/cart/Mdashboard/menuPage/menuPage.html">
+                    <span class="material-symbols-outlined">
+                        restaurant_menu
+                    </span>
+                    <h3>Menu</h3>
+                </a>
+                <a href="/cart/Mdashboard/messagePage/messagePage.html">
+                    <span class="material-symbols-outlined">mail</span>
+                    <h3>Messages</h3>
+                </a>
+                <a href="/cart/Mdashboard/analyticsPage/analysticsPage.html" class="active">
+                    <span class="material-symbols-outlined">
+                        analytics
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="/cart/Mdashboard/categoryPage/category.html">
+                    <span class="material-symbols-outlined">Category</span>
+                    <h3>Categories</h3>
+                </a>
+                <a href="/cart/Mdashboard/ingredients/ingredient.html">
+                    <span class="material-symbols-outlined">grocery</span>
+                    <h3>Ingredients</h3>
+                </a>
+                <a href="/cart/Mdashboard/setmeals/setmeals.html">
+                    <span class="material-symbols-outlined">fastfood</span>
+                    <h3>Set Meals</h3>
+                </a>
+                <a href="/cart/Mdashboard/addnewfoodPage/addnewfood.html">
+                    <span class="material-symbols-outlined">add</span>
+                    <h3>Add new Food</h3>
+                </a>
+                <a href="#" id="logoutBtn">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+
+        </aside>
+        <!--aside section end-->
+
+        <!--main section start-->
+        <main>
+            <h1>Analytics</h1>
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <!--start insight-->
+            <div class="insights">
+                <!---start selling-->
+                <div class="sales">
+                    <span class="material-symbols-outlined">trending_up</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Sales</h3>
+                            <h1 id="TotalSales">$256,468</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">
+                                80%
+                            </div>
+                        </div>
+                    </div>
+                    <small>This Month</small>
+                </div>
+                <!---end selling-->
+
+                <!---start EXPENSE-->
+                <div class="expenses">
+                    <span class="material-symbols-outlined">
+                        local_mall
+                    </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Expenses</h3>
+                            <h1 id="Expenses">$256,468</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">
+                                80%
+                            </div>
+                        </div>
+                    </div>
+                    <small>This Month</small>
+                </div>
+                <!---end EXPENSE-->
+
+                <!---start income-->
+                <div class="income">
+                    <span class="material-symbols-outlined">
+                        stacked_line_chart
+                    </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Income</h3>
+                            <h1 id="Income">$256,468</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">
+                                80%
+                            </div>
+                        </div>
+                    </div>
+                    <small>This Month</small>
+                </div>
+                <!---end income-->
+            </div>
+            <!--end insight-->
+
+            <!--Right section end-->
+            <div class="right">
+
+                <!--start top-->
+                <div class="top">
+                    <button id="menu_bar">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <div class="theme-toggler">
+                        <span class="material-symbols-outlined active">light_mode</span>
+                        <span class="material-symbols-outlined">dark_mode</span>
+                    </div>
+                    <div class="profile">
+                        <div class="info">
+                            <p><b>Bob</b></p>
+                            <p>Admin</p>
+                            <small class="text-muted"></small>
+                        </div>
+                        <div class="profile_photo">
+                            <img src="user.bmp" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!--end top-->
+                <!--start sale analytic-->
+                <div class="sales_analytic">
+                    <h2>Sales Analytics</h2><br>
+                    <div style="display: flex;margin-top: 2%">
+                        <div class="analy" id="lineChart">
+                        </div>
+                        <div class="analy" id="barChart">
+                        </div>
+                    </div>
+                </div>
+                <!--end sale analytic-->
+            </div>
+            <!--right section end-->
+        </main>
+        <!--main section end-->
+    </div>
+
+    <script src="analyticsPage.js"></script>
+    <script>
+        let logoutButton = document.getElementById('logoutBtn');
+
+        // 添加点击事件监听器
+        logoutButton.addEventListener('click', function () {
+            // 清除本地存储中的 JWT 令牌
+            localStorage.removeItem('jwt');
+
+            // 重定向到登录页面或其他适当的页面
+            window.location.href = '../../../Homepage.html';
+        });
+    </script>
+</body>
+
+</html>

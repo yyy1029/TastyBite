@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="adress.css">
+    <script src="/cart/js/logo.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/cart/js/userAvatar.js"></script>
+
+    
+</head>
+<body>
+    <div class="container">
+        <!--aside section start-->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2>T<span>astyBite</span></h2>
+                </div>
+                <div class="close" id="close_bar">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+                <!--end top-->
+
+            <div class="sidebar">
+                <a href="/cart/Cdashboard/Cdashboard.html"  >
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="/cart/Cdashboard/userinformation/userinformation.html">
+                    <span class="material-symbols-outlined">account_circle</span>
+                    <h3>User Information</h3>
+                </a>
+                <a href="/cart/Cdashboard/adress/adress.html"  class="active">
+                        <span class="material-symbols-outlined">
+                            home
+                            </span>
+                    <h3>Address</h3>
+                </a>
+
+                <a href="/cart/Cdashboard/favorite/favorite.html">
+                        <span class="material-symbols-outlined">
+                            kid_star
+                            </span>
+                    <h3>Favorites</h3>
+                </a>
+
+                <a href="/cart/Cdashboard/historyorder/historyorder.html">
+                        <span class="material-symbols-outlined">
+                            list_alt
+                            </span>
+                    <h3>History Order</h3>
+                </a>
+                <a href="#" id="logoutBtn">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+           
+        </aside>
+        <!--aside section end-->   
+         <!--main section start--> 
+         <main>
+            <!--main top Right section-->   
+            <div class="right">
+                <div class="top">
+                    <button id="menu_bar">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <div class="theme-toggler">
+                        <span class="material-symbols-outlined active">light_mode</span>
+                        <span class="material-symbols-outlined">dark_mode</span>
+                    </div>
+                    <div class="profile">
+                        <div class="info">
+                            <p><b>Bob</b></p>
+                            <p>Customer</p>
+                            <small class="text-muted"></small>
+                        </div>
+                        <div class="profile_photo">
+                            <img src="user.bmp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end main right top-->
+            <h1>Address</h1>
+             
+            <!--start food cards-->
+            <div class="User Addresses">
+            
+                <div class="addresses">
+                    <div class="address">
+                        
+                    </div>
+                </div>
+
+            </div>
+              <!--end food cards-->
+
+            <!--add categories-->
+            <div class="item add_address">
+                <div><span class="material-symbols-outlined">add</span></div>
+                <h3>Add New Address</h3>
+            </div>  
+                
+    
+               <!-- 模态框 -->
+    <div id="addressModal" class="modal">
+        <div class="modal-content">
+            <form id="addressForm">
+                <div class="word-wrap">
+                    <label for="User" style="margin-left: 20px;">User name:</label>
+                    <input type="text" id="User" name="User"style="margin-top: 20px;">
+                </div>
+                <div class="word-wrap">
+                    <label for="addressname" style="margin-left: 20px;">Address:</label>
+                    <input type="text" id="addressname" name="addressname"style="margin-top: 20px;">
+                </div>
+                <div class="word-wrap">
+                    <label for="PostalCode" style="margin-left: 20px;">Postal Code:</label>
+                    <input type="text" id="PostalCode" name="PostalCode"style="margin-top: 20px;">
+                </div>
+                <div class="button-group">
+                    <button id="confirmaddressButton">Confirm</button>
+                    <button id="deleteaddressButton">Delete</button>
+            </div>
+            </form>
+        </div>
+    </div>
+    
+    
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <form id="editForm">
+                <div class="word-wrap" style="display: flex;">
+                <label for="editId" style="margin-left: 20px; margin-top: 20px;margin-right:10px;">Address ID:</label>
+                <div id="editIdText" style="margin-top: 20px;"></div>
+                <input type="hidden" id="editId" name="editId">
+                </div>
+                <div class="word-wrap">
+                <label for="editUser" style="margin-left: 20px;">User name:</label>
+                <input type="text" id="editUser" name="editUser"style="margin-top: 20px;">
+                </div>
+                <div class="word-wrap">
+                <label for="editaddress" style="margin-left: 20px;"> Address:</label>
+                <input type="text" id="editaddress" name="editaddress"style="margin-top: 20px;">
+                </div>
+                <div class="word-wrap">
+                <label for="editPostalCode" style="margin-left: 20px;"> PostalCode:</label>
+                <input type="text" id="editPostalCode" name="editPostalCode"style="margin-top: 20px;">
+                </div>
+                <div class="button-group">
+                <button id="confirmEditButton">Confirm</button>
+                <button id="deleteEditButton">Delete</button>
+            </div>
+            </form>
+        </div>
+    </div>
+
+        </main>  
+        <!--main section end--> 
+    
+    </div>
+
+    <script src="adress.js"></script>
+    <script>
+        let logoutButton = document.getElementById('logoutBtn');
+
+        
+        logoutButton.addEventListener('click', function() {
+           
+            localStorage.removeItem('jwt');
+
+            window.location.href = '../../../Homepage.html';
+            
+        });
+    </script>
+
+</body>
+</html>
+

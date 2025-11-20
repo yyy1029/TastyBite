@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add food page</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="addnewfood.css">
+    <script src="/cart/js/userAvatar.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!--aside section start-->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2>T<span>astyBite</span></h2>
+                </div>
+                <div class="close" id="close_bar">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+            <!--end top-->
+
+            <div class="sidebar">
+                <a href="/cart/Mdashboard/Mdashboard.html">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="/cart/Mdashboard/customer/customer.html">
+                    <span class="material-symbols-outlined">person</span>
+                    <h3>Customers</h3>
+                </a>
+                <a href="/cart/Mdashboard/menuPage/menuPage.html">
+                    <span class="material-symbols-outlined">
+                        restaurant_menu
+                    </span>
+                    <h3>Menu</h3>
+                </a>
+                <a href="/cart/Mdashboard/messagePage/messagePage.html">
+                    <span class="material-symbols-outlined">
+                        mail
+                    </span>
+                    <h3>Messages</h3>
+                </a>
+                <a href="/cart/Mdashboard/analyticsPage/analysticsPage.html">
+                    <span class="material-symbols-outlined">
+                        analytics
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="/cart/Mdashboard/categoryPage/category.html">
+                    <span class="material-symbols-outlined">Category</span>
+                    <h3>Categories</h3>
+                </a>
+                <a href="/cart/Mdashboard/ingredients/ingredient.html">
+                    <span class="material-symbols-outlined">grocery</span>
+                    <h3>Ingredients</h3>
+                </a>
+                <a href="/cart/Mdashboard/setmeals/setmeals.html">
+                    <span class="material-symbols-outlined">fastfood</span>
+                    <h3>Set Meals</h3>
+                </a>
+                <a href="/cart/Mdashboard/addnewfoodPage/addnewfood.html" class="active">
+                    <span class="material-symbols-outlined">add</span>
+                    <h3>Add new Food</h3>
+                </a>
+                <a href="#" id="logoutBtn">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+
+        </aside>
+        <!--aside section end-->
+
+        <!--main section start-->
+        <main>
+
+            <div class="page">
+                <h1>Add New Food Item</h1>
+                <!--start add food form-->
+                <form class="food-form">
+                    <div class="form-group">
+                        <label for="food-name">Food Name:</label>
+                        <input type="text" id="food-name" name="food-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="food-description">Description:</label>
+                        <textarea id="food-description" name="food-description" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="food-price">Price:</label>
+                        <input type="number" id="food-price" name="food-price" step="0.01" required>
+                    </div>
+                    <div class="form-group" id="dish_category">
+                        <button id="show-categories-btn" onclick="showCategory(event)">Show Categories</button>
+                        <div id="selected-category">
+                            <h4>Selected Category</h4>
+                        </div>
+                    </div>
+                    <div class="form-group" id="ingredients_row">
+                        <button id="show-ingredients-btn" onclick="showIngredient(event)">Show Ingredients</button>
+                        <div id="selected-ingredients">
+                            <h4>Selected ingredients</h4>
+                            <span class="material-symbols-outlined">delete_forever</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="food-image">Image:</label>
+                        <input type="file" id="food-image" name="food-image" required accept="image/*">
+                    </div>
+                    <button id="submitBtn" onclick="addNewDish(event)">Add Dish</button>
+                </form>
+
+
+                <!-- Modal for Ingredients -->
+                <div id="ingredients-modal" class="modal">
+                    <div class="modal-content">
+                        <h2>Ingredients</h2>
+                        <div class="ingredient-list">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- model for category -->
+                <div id="categoryModal" class="modal2">
+                    <div class="modal-content2">
+                        <!--dynamic ategory---->
+                    </div>
+                </div>
+
+                <!--end add food form-->
+            </div>
+
+        </main>
+        <!--main section end-->
+
+    </div>
+
+    <script src="addnewfood.js"></script>
+    <script src="/cart/js/logo.js"></script>
+    <script src="/cart/js/logout.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- The JavaScript file for Bootstrap is introduced -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

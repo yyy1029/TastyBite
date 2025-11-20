@@ -1,0 +1,30 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+
+# Java 编译文件
+*.class
+*.jar
+*.war
+*.ear
+target/
+
+# SQL 数据库文件
+*.sql
+*.db
+
+# VSCode 配置文件
+.vscode/
+
+# 环境变量文件
+.env
+
+# 日志文件
+*.log
+
+# 其他临时文件
+.DS_Store
+
+

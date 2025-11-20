@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Reset</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div style="text-align: center; margin-top: 200px;">
+        <input type="email" id="email" placeholder="Enter your email" style="padding: 10px; margin-bottom: 10px; width: 300px; border: 2px solid #ccc; border-radius: 5px; box-sizing: border-box;">
+        <button onclick="resetPassword()" style="width: 316px; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Reset Password</button>
+    </div>
+
+    <script type="module">
+        async function loadFirebase() {
+            const { initializeApp } = await import('https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js');
+            const { getAuth, sendPasswordResetEmail } = await import('https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js');
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyDAs7cs6gpJt_nDpEvMg7POQY7pypnPRos",
+                authDomain: "yty-webproj-cpt202.firebaseapp.com",
+                projectId: "yty-webproj-cpt202",
+                storageBucket: "yty-webproj-cpt202.appspot.com",
+                messagingSenderId: "588687789520",
+                appId: "1:588687789520:web:15db4415400e9e275dbdd5",
+                measurementId: "G-M92X7KJNH0"
+            };
+
+            const app = initializeApp(firebaseConfig);
+            const auth = getAuth(app);
+
+            window.resetPassword = async function() {
+                var emailAddress = document.getElementById('email').value;
+                try {
+                    await sendPasswordResetEmail(auth, emailAddress);
+                    alert('Reset link sent to your email.');
+                } catch (error) {
+                    alert(error.message);
+                }
+            }
+        }
+        loadFirebase();
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <title>Login & Registration</title>
+</head>
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+        
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+        </div>
+    </nav>
+
+<!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        
+        <!------------------- login form -------------------------->
+
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email" id="email" oninput="validateEmailOnInput()">
+                <i class="bx bx-user"></i>
+                <div id="emailValidate" class="email-validate"></div>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password" id="password" oninput="checkPasswordStrength()">
+                <i class="bx bx-lock-alt"></i>
+                <div id="passwordStrength" class="password-strength"></div>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Sign In" id="submit-login">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <!-- <label><a href="#">Forgot password?</a></label> -->
+                  
+                    <a href="resetpsw.html" style="color: yellow;">Forgot password?</a>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!------------------- registration form -------------------------->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                <header>Sign Up</header>
+            </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Fulltname" id="fullname">
+                    <i class="bx bx-user"></i>
+                </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email" id="Remail" oninput="validateEmailOnInputRegister()">
+                <i class="bx bx-envelope"></i>
+                <div id="emailValidateRegister" class="register-email-validate"></div>
+            </div>
+            
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password" id="Rpassword" oninput="checkPasswordStrengthRegister()">
+                <i class="bx bx-lock-alt"></i>
+                <div id="passwordStrengthRegister" class="register-password-strength"></div>
+            </div>
+            
+
+            <div class="input-box">
+                <div class="two-role">
+                    <button class="role-btn selected" onclick="selectRole('ROLE_CUSTOMER',this)">Customer</button>
+                    <button class="role-btn" onclick="selectRole('ROLE_MANAGER',this)">Manager</button>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register" id="registerButton">
+            </div>
+
+           
+            
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Terms & conditions</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+<script src="check.js"></script>
+
+
+</body>
+</html>

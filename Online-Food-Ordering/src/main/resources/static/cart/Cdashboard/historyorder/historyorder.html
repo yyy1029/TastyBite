@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="historyorder.css">
+</head>
+
+<body>
+
+<div class="header">
+
+    <input type="checkbox" id="display">
+
+    <div class="container2">
+        <label for="display" class="close-btn" title="close" onclick="closePopup()">&times;</label>
+
+        <h1>Comment</h1>
+        <form action="#">
+
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+            <button onclick="comment()" type="submit" class="submit-button">Submit Comment</button>
+
+        </form>
+    </div>
+
+
+    <div class="container">
+        <!--aside section start-->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2>T<span>astyBite</span></h2>
+                </div>
+                <div class="close" id="close_bar">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+            <!--end top-->
+
+            <div class="sidebar">
+                <a href="/cart/Cdashboard/Cdashboard.html"  >
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="/cart/Cdashboard/userinformation/userinformation.html">
+                    <span class="material-symbols-outlined">account_circle</span>
+                    <h3>User Information</h3>
+                </a>
+                <a href="/cart/Cdashboard/adress/adress.html">
+                        <span class="material-symbols-outlined">
+                            home
+                            </span>
+                    <h3>Address</h3>
+                </a>
+
+                <a href="/cart/Cdashboard/favorite/favorite.html">
+                        <span class="material-symbols-outlined">
+                            kid_star
+                            </span>
+                    <h3>Favorites</h3>
+                </a>
+
+                <a href="/cart/Cdashboard/historyorder/historyorder.html"  class="active">
+                        <span class="material-symbols-outlined">
+                            list_alt
+                            </span>
+                    <h3>History Order</h3>
+                </a>
+                <a href="#" id="logoutBtn">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+
+        </aside>
+        <!--aside section end-->
+        <!--main section start-->
+        <main>
+            <!--main top Right section-->
+            <div class="right">
+                <div class="top">
+                    <button id="menu_bar">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <div class="theme-toggler">
+                        <span class="material-symbols-outlined active">light_mode</span>
+                        <span class="material-symbols-outlined">dark_mode</span>
+                    </div>
+                    <div class="profile">
+                        <div class="info">
+                            <p><b>Bob</b></p>
+                            <p>Admin</p>
+                            <small class="text-muted"></small>
+                        </div>
+                        <div class="profile_photo">
+                            <img src="user.bmp" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--end main right top-->
+            <h1>History Order</h1>
+
+            <!--start food cards-->
+            <div class="dishes">
+                <div class="dish">
+                    <table>
+                        <thead>
+                        <!-- rating -->
+                        <tr>
+                            <th>ID</th>
+                            <th>Order Status</th>
+                            <th>Time</th>
+                            <th>Rating</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+
+                        <tbody id="lists">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <!--main section end-->
+    </div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="historyorder.js"></script>
+    <script src="rating.js"></script>
+</body>
+</html>
